@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import "shadcn/tailwind.css";
+
+@theme inline {
+  /* --- Текст (ваши текущие) --- */
+  --color-text-main: #ffffff;
+
+  /* Мягкий текст — emerald-700 из палитры Tailwind */
+  --color-text-soft: #047857;
+
+  /* --- Стекло (ваши текущие) --- */
+  --color-glass-bg: #ffffff1a;
+  --color-glass-border: #ffffff66;
+  --color-glass-highlight: #ffffff26;
+  --color-glass-border-subtle: #ffffff1a;
+
+  /* --- НОВЫЕ ФОНЫ (Stardew Valley) --- */
+  /* Теперь классы будут называться bg-soil, bg-wood и т.д. */
+
+  --color-soil: #2b1d12;
+  /* Земля (самый темный фон) */
+  --color-wood: #3d2a1c;
+  /* Дерево (хедер, панели) */
+  --color-parchment: #553b28;
+  /* Пергамент (карточки, списки) */
+  --color-copper: #8c5733;
+  /* Медь (акценты, ховеры) */
+
+  --color-border-wood: #4a3424;
+  /* Обводка для деревянных панелей */
+}
+
+
+@layer components {
+  .glass-panel {
+    @apply bg-glass-bg border border-glass-border backdrop-blur-md rounded-[2rem] shadow-2xl shadow-black/30;
+  }
+}
