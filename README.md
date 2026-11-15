@@ -1,75 +1,34 @@
-# React + TypeScript + Vite
+# 🌾 Stardew Valley Item Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Вайб-код веб-приложение** для удобного трекинга и коллекционирования предметов в Stardew Valley. Больше не нужно держать в голове, что вы уже скрафтили, а что еще предстоит найти!
 
-Currently, two official plugins are available:
+## ✨ Особенности
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+*   **Разделение по категориям:** Объекты, инструменты, оружие, мебель, одежда и многое другое.
+*   **Умный поиск:** Быстрый поиск нужного предмета по названию прямо в интерфейсе.
+*   **Золотые руки (Кросс-синхронизация):** Специальная категория, которая объединяет предметы с одинаковыми названиями. Если вы отметили предмет здесь, он автоматически отметится во всех остальных вкладках.
+*   **Сохранение прогресса:** Данные надежно хранятся в `localStorage` вашего браузера.
+*   **Экспорт и Импорт:** Возможность скачать свой прогресс в JSON-файл и загрузить его обратно (на случай очистки кэша или переноса на другое устройство).
+*   **Ссылки на Wiki:** Быстрый переход на страницу предмета в официальной энциклопедии Fandom.
+*   **Стильный дизайн:** Приятная глазу «стеклянная» тема с использованием Tailwind CSS.
 
-## React Compiler
+## 🛠️ Стек технологий
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **React** + **TypeScript**
+*   **Vite** (сборка)
+*   **Tailwind CSS** (стилизация)
+*   **shadcn/ui** (UI-компоненты)
+*   **Lucide React** (иконки)
 
-## Expanding the ESLint configuration
+## 📦 Источник данных
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Все актуальные ID, названия, локализации и иконки предметов были спарсены из открытого репозитория [MateusAquino/stardewids](https://github.com/MateusAquino/stardewids). Огромная благодарность автору за поддержание базы данных в актуальном состоянии для версии 1.6!
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Локальный запуск
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Если вы хотите запустить проект локально:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+1. Клонируйте репозиторий.
+2. Установите зависимости:
+   ```bash
+   npm install
