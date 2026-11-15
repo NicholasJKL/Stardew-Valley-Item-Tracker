@@ -30,7 +30,7 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/NicholasJKL/stardew-widgets.git
+git clone https://github.com/NicholasJKL/Stardew-Valley-Item-Tracker.git
 ```
 2. Установите зависимости:
 ```bash
